@@ -1,0 +1,152 @@
+html {
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin-bottom: 140px; /* Menyesuaikan tinggi footer agar tidak menutupi bagian kontak */
+  margin-top: 56px;
+  background-color: #ffffff;
+  color: #333333;
+}
+
+hr {
+  width: 250px;
+  border-top: 3px solid #007bff;
+  margin-bottom: 30px;
+}
+
+section {
+  min-height: 550px;
+}
+
+/* Jumbotron Header */
+.jumbotron {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)),
+    url("bahan/codes.png");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  overflow: hidden;
+  padding-top: 80px;
+  padding-bottom: 70px;
+}
+
+.jumbotron img {
+  width: 170px;
+  height: 170px;
+  object-fit: cover;
+  border: 4px solid #007bff;
+}
+
+.jumbotron h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+.jumbotron p {
+  color: #dddddd;
+}
+
+/* Stat Cards */
+.stat-card {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Section About Animation */
+.pKiri,
+.pKanan {
+  opacity: 0;
+  transform: translate(-50px, 0) rotate(5deg);
+  transition: all 0.8s ease-in-out;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.pKanan {
+  transform: translate(50px, 0) rotate(-5deg);
+}
+
+.pKiri.pmuncul,
+.pKanan.pmuncul {
+  opacity: 1;
+  transform: translate(0, 0) rotate(0deg);
+}
+
+/* Section Featured Projects / Portfolio */
+.portfolio {
+  background-color: #f8f9fa;
+  padding-bottom: 60px;
+}
+
+.portfolio .thumbnail {
+  opacity: 0;
+  transform: translate(0, -40px);
+  transition: all 0.6s ease;
+  overflow: hidden;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+.portfolio .thumbnail img {
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.portfolio .thumbnail:hover img {
+  transform: scale(1.05);
+}
+
+.portfolio .thumbnail.muncul {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.card {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Section Contact */
+.contact {
+  padding-bottom: 60px;
+}
+
+/* Navbar Branding */
+i.sekul {
+  color: #007bff;
+  font-size: 22px;
+}
+
+/* Footer */
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 130px;
+  background-color: #1a1e21;
+  padding-top: 25px;
+}
+
+footer p {
+  color: #aaa;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
